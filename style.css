@@ -1,22 +1,43 @@
-html
-body {
-  height: 100%;
-  width: 100%;
+/* Reset styles */
+* {
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  
 }
 
 body {
-  display: grid;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.container div {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  border: 1px solid blue;
-  background-color: pink;
-  display: inline-block;
-  float: left;
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  height: 700px;
+  border: 1px dotted rgb(red, green, blue);
+  background-color: red;
+  border-radius: 10%;
 }
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  border: 1px dotted blue;
+  background-color: #d3d3d3; 
+}
+
