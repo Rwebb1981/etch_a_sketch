@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Select the container
-    const container = document.getElementById('container');
+    const container = document.getElementById('grid-container');
 
     // Define the grid size (16x16)
     const gridSize = 16;
@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.style.height = `${400 / gridSize}px`; // Calculate cell height
         cell.style.boxSizing = 'border-box';
         cell.style.border = '1px solid rgba(0, 0, 0, 0.1)'; // Optional: light borders
+        
+        //Set hover function
+        cell.addEventListener('mouseenter', () => {
+            cell.style.backgroundColor = 'grey';
+        });
+        
         container.appendChild(cell);
     }
+
+
 });
