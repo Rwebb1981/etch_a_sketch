@@ -29,5 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(cell);
     }
 
+    document.getElementById('resizeButton').addEventListener('click', () => {
+        let gridSize = prompt("Enter the new grid size (e.g., 16 for 16x16, max 100):", "16");
+        if (gridSize !== null) {
+            gridSize = parseInt(gridSize, 10);
+            if (!isNaN(gridSize) && gridSize > 0 && gridSize <= 100) {
+                createGrid(gridSize);
+            } else {
+                alert("Please enter a valid positive number between 1 and 100.");
+            }
+        }
+    });
+    
+    function createGrid(size) {
+        const container = document.getElementById('gridContainer');
+        container.innerHTML = ''; // Clear the existing grid
+        container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+        container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    
+        for (let i = 0; i < size * size; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('gridCell');
+            container.appendChild(cell);
+        }
+    }
 
 });
+
+

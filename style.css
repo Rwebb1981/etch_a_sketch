@@ -17,6 +17,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -56,6 +57,20 @@ body {
   box-sizing: border-box;
 }
 
-/* Create button to change the grid size */
+#resizeButton {
+  display: flex;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
 
-  button 
+#gridContainer {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.gridCell {
+  border: 1px solid #ddd; 
+} /* Optional for visual clarity */
