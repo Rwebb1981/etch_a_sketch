@@ -39,6 +39,16 @@ body {
   border-radius: 10%;
 }
 
+/*Define the header*/
+
+#h1 {
+  display: flex;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
 /* Define the initial 16x16 grid */
 
 #grid-container {
@@ -57,12 +67,19 @@ body {
   box-sizing: border-box;
 }
 
-#resizeButton {
-  display: flex;
+#buttonContainer {
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 65px; /* Space between buttons */
+  margin-top: 30px; /* Add some space above the buttons */
+  z-index: 1;
+}
+
+button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  z-index: 1;
+}
 
 #gridContainer {
   display: grid;
